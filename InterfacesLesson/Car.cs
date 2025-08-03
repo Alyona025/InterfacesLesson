@@ -8,16 +8,17 @@ namespace InterfacesLesson
 {
     class Car
     {
+
         public bool included;
         public string sound;
 
         public Car(bool included)
         {
             this.included = included;
-        }    
+        }
 
-       public void MakeSound()
-       {
+        public void MakeSound()
+        {
             if (included)
             {
                 sound = "~Биип!";
@@ -25,7 +26,7 @@ namespace InterfacesLesson
             else { sound = "..."; }
 
             Console.WriteLine($"Звук машины: {sound}");
-       }
+        }
 
     }
 }

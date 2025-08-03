@@ -8,11 +8,12 @@ namespace InterfacesLesson
 {
     class Cow
     {
+
         public static string sound;
 
         public Cow()
         {
-            
+
         }
 
         public void MakeSound()

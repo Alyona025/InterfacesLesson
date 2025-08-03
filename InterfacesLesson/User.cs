@@ -8,8 +8,9 @@ namespace InterfacesLesson
 {
     class User
     {
+
         public string Name;
-        public User(string Name) 
+        public User(string Name)
         {
             this.Name = Name;
         }

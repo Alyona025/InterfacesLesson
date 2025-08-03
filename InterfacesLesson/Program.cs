@@ -10,30 +10,41 @@ namespace InterfacesLesson
     {
         static void Main(string[] args)
         {
-            Cow cow1 = new Cow();
-            Cow cow2 = new Cow();
 
-            Car car1 = new Car(false);
+            List<Cow> cows = new List<Cow>();
+            List<Car> cars = new List<Car>();
+            List<User> users = new List<User>();
 
-            User user1 = new User("Гриша");
-            User user2 = new User("Маша");
-            User user3 = new User("Даша");
-            User user4 = new User("Ваня");
-            User user5 = new User("Саша");
+            cows.Add(new Cow());
+            cows.Add(new Cow());
+
+            cars.Add(new Car(true));
+
+            users.Add(new User("Таня"));
+            users.Add(new User("Гриша"));
+            users.Add(new User("Саша"));
+            users.Add(new User("Даша"));
+            users.Add(new User("Кира"));
 
             Console.WriteLine("Звуки: ");
 
 
-            for (int i = 0; i < 1; i++ )
+            for (int i = 0; i < 1; i++)
             {
-                cow1.MakeSound();
-                cow2.MakeSound();
-                car1.MakeSound();
-                user1.MakeSound();
-                user2.MakeSound();
-                user3.MakeSound();
-                user4.MakeSound();
-                user5.MakeSound();
+                foreach (Cow cow in cows)
+                {
+                  cow.MakeSound();
+                }
+
+                foreach (Car car in cars)
+                {
+                    car.MakeSound();
+                }
+
+                foreach (User user in users)
+                {
+                    user.MakeSound();
+                }
 
             }
         }
