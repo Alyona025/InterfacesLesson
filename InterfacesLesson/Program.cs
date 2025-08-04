@@ -28,25 +28,22 @@ namespace InterfacesLesson
 
             Console.WriteLine("Звуки: ");
 
+            // Создаем список Creature
+            List<Creature> creatures = new List<Creature>();
 
-            for (int i = 0; i < 1; i++)
+            //List<Creature>[] creatures = { cows, cars, users }; // почему-то ошибка
+
+            // Добавляем объекты подклассов
+            creatures.AddRange(cows);
+            creatures.AddRange(cars);
+            creatures.AddRange(users);
+
+            foreach (Creature creature in creatures)
             {
-                foreach (Cow cow in cows)
-                {
-                  cow.MakeSound();
-                }
-
-                foreach (Car car in cars)
-                {
-                    car.MakeSound();
-                }
-
-                foreach (User user in users)
-                {
-                    user.MakeSound();
-                }
+             creature.MakeSound();
 
             }
         }
+       
     }
 }

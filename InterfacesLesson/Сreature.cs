@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace InterfacesLesson
 {
-    class Cow : Creature
+    class Creature
     {
-
-        public Cow() 
-        {
-            base.sound = "~Муу";
-
-
+        public string sound;
+        public Creature()
+        { 
+        
         }
-     
 
+        public void MakeSound()
+        {
+            Console.WriteLine(sound);
+        
+        }
     }
 }

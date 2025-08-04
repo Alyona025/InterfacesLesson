@@ -6,27 +6,21 @@ using System.Threading.Tasks;
 
 namespace InterfacesLesson
 {
-    class Car
+    class Car: Creature
     {
 
         public bool included;
-        public string sound;
 
         public Car(bool included)
         {
             this.included = included;
-        }
-
-        public void MakeSound()
-        {
             if (included)
             {
-                sound = "~Биип!";
+                base.sound = "~Биип!";
             }
-            else { sound = "..."; }
-
-            Console.WriteLine($"Звук машины: {sound}");
+            else { base.sound = "..."; }
         }
+    
 
     }
 }

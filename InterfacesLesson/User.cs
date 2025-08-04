@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace InterfacesLesson
 {
-    class User
+    class User : Creature
     {
 
         public string Name;
         public User(string Name)
         {
             this.Name = Name;
+            base.sound = $"Привет! Меня зовут {Name}";
+
         }
 
-        public void MakeSound()
-        {
-            Console.WriteLine($"Человек сказал: Привет! Меня зовут {Name}");
-        }
     }
 }
