@@ -2,21 +2,17 @@
 
 namespace InterfacesLesson
 {
-    class Cow : Creature, IHasHair
+    class Doll : IHasHair
     {
         public string HairColor { get; set; }
 
-        public Cow(string HairColor)
+        public Doll(string HairColor)
         {
-            base.sound = "~Муу";
             this.HairColor = HairColor;
-
         }
         public void RemoveHairColor()
         {
-            Console.WriteLine($"Цвет шерсти коровы - {HairColor}");
+            Console.WriteLine($"Цвет волос куклы - {HairColor}");
         }
-
-
     }
 }
